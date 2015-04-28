@@ -12,6 +12,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'clearance'
 
+gem 'autoprefixer-rails'
+
 group :development do
   gem 'quiet_assets'
 end
