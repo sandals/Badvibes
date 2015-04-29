@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'clearance'
 
 gem 'autoprefixer-rails'
+gem 'simple_form'
 
 group :development do
   gem 'quiet_assets'

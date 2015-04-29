@@ -1,4 +1,6 @@
 class HomesController < ApplicationController
+  skip_before_filter :require_login
+
   def show
     if signed_in?
       redirect_to overview_path

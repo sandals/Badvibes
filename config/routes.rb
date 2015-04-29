@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root to: 'homes#show'
 
   get 'overview', to: 'overview#index', as: 'overview'
+
+  resources :shares, only: [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
