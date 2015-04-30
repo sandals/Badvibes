@@ -1,0 +1,19 @@
+@import "bourbon";
+
+.share {
+  @include outer-container;
+  background: white;
+
+  &__image {
+    @include span-columns(4);
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    @include span-columns(8);
+  }
+}

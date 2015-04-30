@@ -1,11 +1,17 @@
 <h1>Overview</h1>
 <%= link_to "New Share", new_share_path %>
 <hr>
-<% @shares.each do |share| %>
-  <div>
-    <%= image_tag share.image.url(:medium) %>
-    <h2><%= share.artist %></h2>
-    <p><%= share.album %></p>
-    <%= link_to "download", share.url %>
-  </div>
-<% end %>
+<div class="shares">
+  <% @shares.each do |share| %>
+    <div class="share">
+      <div class="share__image">
+        <%= image_tag share.image.url %>
+      </div>
+      <div class="share__content">
+        <h2><%= share.artist %></h2>
+        <p><%= share.album %></p>
+        <%= link_to "download", share.url %>
+      </div>
+    </div>
+  <% end %>
+</div>

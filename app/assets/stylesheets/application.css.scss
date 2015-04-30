@@ -15,6 +15,14 @@
  */
 
 @import "bourbon";
+
+/*
+$visual-grid: true;
+$visual-grid-color: red;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.1;
+*/
 @import "neat";
 
 @import "layout";
+@import "shares";
