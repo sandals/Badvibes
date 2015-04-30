@@ -1,10 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
 
+$blue: #223843;
+$red: #FE5F55;
+$dark-brown: #322E18;
+
 html { font-size: 1em; }
 
 body {
-  background: #EFF1F3;
-  color: #223843;
+  background: #E8EEF2;
+  color: #11151C;
   font-family: 'PT Sans', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
   font-weight: 400;
   line-height: 1.45;
@@ -20,9 +24,15 @@ h1, h2, h3, h4 {
 small { font-size: 0.707em; }
 
 a {
-  color: #FE5F55;
+  color: $red;
 
   &:hover {
-    color: mix(black, #FE5F55, 10%);
+    color: mix(black, $red, 10%);
   }
+}
+
+.global-header {
+  background: #11151C;
+  color: white;
+  padding: 0.5em;
 }

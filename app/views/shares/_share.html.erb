@@ -3,7 +3,11 @@
     <%= image_tag share.image.url %>
   </div>
   <div class="share__content">
-    <h2><%= share.artist %> &ndash; <%= share.album %></h2>
+    <div class="share__header">
+      <h2><%= share.artist %> &ndash; <%= share.album %></h2>
+    </div>
+
+    <small>Posted by: <%= share.user.username %></small>
     <%= link_to "download", share.url %>
   </div>
 </div>
