@@ -7,14 +7,11 @@ feature "User creates share" do
     visit overview_path(as: create(:user))
     click_link "New Share"
 
-    fill_in "Artist", with: potential_share.artist
-    fill_in "Album", with: potential_share.album
-    fill_in "Url", with: potential_share.url
-    click_button "Post"
+    share_form(potential_share) do
+      click_button "Post"
+    end
 
-    expect(page).to have_content(potential_share.artist)
-    expect(page).to have_content(potential_share.album)
-    expect(page).to have_css("a[href='#{potential_share.url}']")
+    expect_page_to_have_share(potential_share)
   end
 
   scenario "with album art" do
@@ -23,15 +20,12 @@ feature "User creates share" do
     visit overview_path(as: create(:user))
     click_link "New Share"
 
-    fill_in "Artist", with: potential_share.artist
-    fill_in "Album", with: potential_share.album
-    fill_in "Url", with: potential_share.url
-    attach_file("Image", "#{Rails.root}/spec/files/image.jpg")
-    click_button "Post"
+    share_form(potential_share) do
+      attach_file("Image", "#{Rails.root}/spec/files/image.jpg")
+      click_button "Post"
+    end
 
-    expect(page).to have_content(potential_share.artist)
-    expect(page).to have_content(potential_share.album)
-    expect(page).to have_css("a[href='#{potential_share.url}']")
+    expect_page_to_have_share(potential_share)
     expect(page).to have_css("img")
   end
 end
