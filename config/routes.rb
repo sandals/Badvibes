@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'homes#show'
+
   resources :passwords, controller: 'clearance/passwords', only: [:create, :new]
   resource :session, controller: 'clearance/sessions', only: [:create]
 
@@ -11,8 +13,6 @@ Rails.application.routes.draw do
   get '/sign_in' => 'clearance/sessions#new', as: 'sign_in'
   delete '/sign_out' => 'clearance/sessions#destroy', as: 'sign_out'
   get '/sign_up' => 'clearance/users#new', as: 'sign_up'
-
-  root to: 'homes#show'
 
   get 'overview', to: 'overview#index', as: 'overview'
 
