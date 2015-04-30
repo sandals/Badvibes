@@ -12,8 +12,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'clearance'
 gem 'simple_form'
+gem 'paperclip', '~> 4.2'
 
 gem 'autoprefixer-rails'
+gem 'normalize-rails'
 gem 'bourbon'
 gem 'neat'
 

@@ -3,6 +3,7 @@
 <hr>
 <% @shares.each do |share| %>
   <div>
+    <%= image_tag share.image.url(:medium) %>
     <h2><%= share.artist %></h2>
     <p><%= share.album %></p>
     <%= link_to "download", share.url %>

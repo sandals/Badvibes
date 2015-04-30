@@ -14,6 +14,6 @@ class SharesController < ApplicationController
   private
 
   def share_params
-    params.require(:share).permit(:artist, :album, :url)
+    params.require(:share).permit(:artist, :album, :url, :image)
   end
 end
