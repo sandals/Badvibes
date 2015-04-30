@@ -1,0 +1,10 @@
+<div class="share">
+  <div class="share__image">
+    <%= image_tag share.image.url %>
+  </div>
+  <div class="share__content">
+    <h2><%= share.artist %></h2>
+    <p><%= share.album %></p>
+    <%= link_to "download", share.url %>
+  </div>
+</div>
