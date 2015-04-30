@@ -11,9 +11,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'clearance'
+gem 'simple_form'
 
 gem 'autoprefixer-rails'
-gem 'simple_form'
+gem 'bourbon'
+gem 'neat'
 
 group :development do
   gem 'quiet_assets'
