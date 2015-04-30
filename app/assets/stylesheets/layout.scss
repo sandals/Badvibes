@@ -1,11 +1,23 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
 
+html { font-size: 1em; }
+
 body {
   background: #EFF1F3;
   color: #223843;
-  font-family: 'PT Sans', Helvetica Neue, Helvetica, Arial, Sans-serif;
+  font-family: 'PT Sans', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
   text-rendering: optimizeLegibility;
 }
+
+p { margin-bottom: 1.3em; }
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+}
+
+small { font-size: 0.707em; }
 
 a {
   color: #FE5F55;
