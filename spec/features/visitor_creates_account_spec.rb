@@ -1,11 +1,15 @@
 require "rails_helper"
 
 feature "Visitor creates account" do
-  scenario "and will be redirected to overview" do
-    visit root_path
-    expect_user_to_be_signed_out
+  scenario "with username" do
+    visit sign_up_path
+    expect(page).to have_content('Username')
 
-    sign_up_with("test@example.com", "password")
-    expect(page).to have_content("Overview")
+    fill_in "Email", with: "e@t.co"
+    fill_in "Username", with: "UniQueUsername"
+    fill_in "Password", with: "password"
+    click_button "Sign up"
+
+    expect(page).to have_content("UniQueUsername")
   end
 end
