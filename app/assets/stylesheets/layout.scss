@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+@import "bourbon";
 
 $blue: #223843;
 $red: #FE5F55;
@@ -35,4 +36,24 @@ a {
   background: #11151C;
   color: white;
   padding: 0.5em;
+}
+
+.overview {
+  @include outer-container;
+  padding: 0 1em;
+}
+.actions {
+  @include span-columns(4);
+  .btn {
+    width: 100%;
+    display: block;
+  }
+}
+.shares {
+  @include span-columns(8);
+}
+@media screen and (max-width: 480px) {
+  .shares, .actions {
+    @include span-columns(12);
+  }
 }

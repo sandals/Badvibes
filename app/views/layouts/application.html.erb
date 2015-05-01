@@ -14,7 +14,7 @@
     </div>
 
     <header class="global-header">
-      <a href="#">Badvibes</a>
+      <%= link_to "Badvibes", root_path %>
       <% if signed_in? %>
         Signed in as: <%= current_user.username %>
         <%= button_to 'Sign out', sign_out_path, method: :delete %>

@@ -1,0 +1,12 @@
+.btn {
+  display: inline-block;
+  border-radius: 2px;
+  background: white;
+  text-decoration: none;
+  padding: 0.5em;
+
+  &--primary {
+    background: #11151C;
+    color: white;
+  }
+}

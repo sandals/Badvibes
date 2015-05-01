@@ -1,8 +1,11 @@
 <h1>Overview</h1>
-<%= link_to "New Share", new_share_path %>
-<hr>
-<div class="shares">
-  <% @shares.each do |share| %>
-    <%= render partial: "shares/share", locals: { share: share } %>
-  <% end %>
+<div class="overview">
+  <div class="actions">
+    <%= link_to "New Share", new_share_path, class: "btn btn--primary" %>
+  </div>
+  <div class="shares">
+    <% @shares.each do |share| %>
+      <%= render partial: "shares/share", locals: { share: share } %>
+    <% end %>
+  </div>
 </div>
