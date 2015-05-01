@@ -32,10 +32,30 @@ a {
   }
 }
 
+.wrapper {
+  @include outer-container;
+  padding: 0 1em;
+}
+
 .global-header {
   background: #11151C;
   color: white;
-  padding: 0.5em;
+  padding: 1em;
+  margin-bottom: 1em;
+
+  &__logo {
+    @include span-columns(4);
+  }
+  &__actions {
+    @include span-columns(8);
+    text-align: right;
+    .button_to { display: inline-block; }
+  }
+
+  .username {
+    margin-right: 1em;
+    color: mix(white, #11151C, 90%);
+  }
 }
 
 .overview {
@@ -53,6 +73,7 @@ a {
   @include span-columns(8);
 }
 @media screen and (max-width: 480px) {
+  .actions { margin-bottom: 1em; }
   .shares, .actions {
     @include span-columns(12);
   }

@@ -1,12 +1,23 @@
 .btn {
   display: inline-block;
+  border: none;
   border-radius: 2px;
   background: white;
+  color: black;
   text-decoration: none;
   padding: 0.5em;
 
-  &--primary {
+  &--brand {
     background: #11151C;
+    color: $red;
+  }
+  &--header {
+    background: mix(white, #11151C, 10%);
+    color: mix(white, #11151C, 70%);
+  }
+
+  &--primary {
+    background: #223843;
     color: white;
   }
 }

@@ -14,13 +14,19 @@
     </div>
 
     <header class="global-header">
-      <%= link_to "Badvibes", root_path %>
-      <% if signed_in? %>
-        Signed in as: <%= current_user.username %>
-        <%= button_to 'Sign out', sign_out_path, method: :delete %>
-      <% else %>
-        <%= link_to 'Sign in', sign_in_path %>
-      <% end %>
+      <div class="wrapper">
+        <div class="global-header__logo">
+          <%= button_to "Badvibes", root_path, method: :get, class: "btn btn--brand" %>
+        </div>
+        <div class="global-header__actions">
+          <% if signed_in? %>
+            <span class="username"><%= current_user.username %></span>
+            <%= button_to 'Sign out', sign_out_path, method: :delete, class: "btn btn--header" %>
+          <% else %>
+            <%= link_to 'Sign in', sign_in_path %>
+          <% end %>
+        </div>
+      </div>
     </header>
 
     <%= yield %>
