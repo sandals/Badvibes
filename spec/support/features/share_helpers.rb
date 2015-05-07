@@ -1,9 +1,9 @@
 module Features
   module ShareHelpers
     def share_form(share)
-      fill_in "Artist", with: share.artist
-      fill_in "Album", with: share.album
-      fill_in "Url", with: share.url
+      fill_in 'Artist', with: share.artist
+      fill_in 'Album', with: share.album
+      fill_in 'Url', with: share.url
       yield
     end
 

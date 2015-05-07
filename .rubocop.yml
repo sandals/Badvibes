@@ -1,0 +1,8 @@
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+
+Documentation:
+  Enabled: false
