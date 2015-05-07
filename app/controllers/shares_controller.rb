@@ -6,9 +6,7 @@ class SharesController < ApplicationController
   def create
     share = current_user.shares.new(share_params)
 
-    if share.save
-      redirect_to overview_path
-    end
+    redirect_to overview_path if share.save
   end
 
   private
